@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31515.178
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Grib2PNetCore.App", "Grib2PNetCore.App\Grib2PNetCore.App.csproj", "{60C23E73-F769-465E-BAB7-359CA5961A22}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Grib2PNetCore.Core", "Grib2PNetCore.Core\Grib2PNetCore.Core.csproj", "{D92ECEB1-669C-485E-956D-AE041300DB27}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{60C23E73-F769-465E-BAB7-359CA5961A22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60C23E73-F769-465E-BAB7-359CA5961A22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60C23E73-F769-465E-BAB7-359CA5961A22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60C23E73-F769-465E-BAB7-359CA5961A22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D92ECEB1-669C-485E-956D-AE041300DB27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D92ECEB1-669C-485E-956D-AE041300DB27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D92ECEB1-669C-485E-956D-AE041300DB27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D92ECEB1-669C-485E-956D-AE041300DB27}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B033DD2C-97A5-4F56-B23C-5F4C5A8BF3BE}
+	EndGlobalSection
+EndGlobal
