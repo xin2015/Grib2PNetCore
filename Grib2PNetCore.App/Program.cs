@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Grib2PNetCore.Core;
+using System;
 
 namespace Grib2PNetCore.App
 {
@@ -6,7 +7,8 @@ namespace Grib2PNetCore.App
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            string path = @"C:\Users\LiuHa\Downloads\fnl_20210808_00_00.grib2";
+            GribFile gribFile = new GribFile(path);
         }
     }
 }
