@@ -14,14 +14,19 @@ namespace Grib2PNetCore.Core
 
         public IdentificationSection IdentificationSection { get; set; }
 
-        public LocalUseSection LocalUseSection { get; set; }
+        public Section LocalUseSection { get; set; }
+
+        public GridDefinitionSection GridDefinitionSection { get; set; }
 
         public GribMessage(BinaryReader reader)
         {
             IndicatorSection = new IndicatorSection(reader);
             IdentificationSection = new IdentificationSection(reader);
-            LocalUseSection = new LocalUseSection(reader);
-
+            if (IdentificationSection.Center == 7 && IdentificationSection.SubCenter == 14)
+            {
+                LocalUseSection = new MDLLocalUseSection(reader);
+            }
+            GridDefinitionSection = new GridDefinitionSection(reader);
         }
     }
 }

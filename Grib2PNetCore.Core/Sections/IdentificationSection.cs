@@ -18,7 +18,6 @@ namespace Grib2PNetCore.Core.Sections
         public DateTime ReferenceTime { get; set; }
         public byte ProductionStatus { get; set; }
         public byte Type { get; set; }
-        public byte[] Reserved { get; set; }
 
         public IdentificationSection(BinaryReader reader) : base(reader)
         {
@@ -40,7 +39,6 @@ namespace Grib2PNetCore.Core.Sections
             ReferenceTime = new DateTime(year, month, day, hour, minute, second, DateTimeKind.Utc);
             ProductionStatus = reader.ReadByte();
             Type = reader.ReadByte();
-            Reserved = reader.ReadBytes(Length - 21);
         }
     }
 }

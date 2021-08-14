@@ -12,19 +12,23 @@ namespace Grib2PNetCore.Core.Extensions
         public static short ReadGribInt16(this BinaryReader reader)
         {
             byte[] bytes = reader.ReadBytes(2).Reverse().ToArray();
-            return BitConverter.ToInt16(bytes);
+            short value = BitConverter.ToInt16(bytes);
+            return (short)(bytes[0] < 128 ? value : (short.MinValue - value));
         }
 
         public static int ReadGribInt32(this BinaryReader reader)
         {
             byte[] bytes = reader.ReadBytes(4).Reverse().ToArray();
-            return BitConverter.ToInt32(bytes);
+            int value = BitConverter.ToInt32(bytes);
+            return bytes[0] < 128 ? value : (int.MinValue - value);
         }
+
 
         public static long ReadGribInt64(this BinaryReader reader)
         {
             byte[] bytes = reader.ReadBytes(8).Reverse().ToArray();
-            return BitConverter.ToInt64(bytes);
+            long value = BitConverter.ToInt64(bytes);
+            return bytes[0] < 128 ? value : (long.MinValue - value);
         }
     }
 }
